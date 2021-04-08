@@ -6,12 +6,13 @@ import time
 import os
 
 sym = "0123456789abcdefghijklmnopqrstuvwxyz"
+path = "images/"
 
 random.seed(int(time.time()))
 
 def get(src,code):
     image = requests.get(src)
-    with open("images/"+code+"_im.png",'wb') as f:
+    with open(path+code+"_im.png",'wb') as f:
         f.write(image.content)
 
 def rnd():
